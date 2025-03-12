@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Feedback Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 500px;
+        }
+
+        .card {
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100 bg-light">
+
+    <div class="container">
+        <div class="card shadow p-4">
+            <h2 class="text-center text-primary">Feedback Form</h2>
+            <form id="feedbackForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name (Optional):</label>
+                    <input type="text" id="name" name="name" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email (Optional):</label>
+                    <input type="email" id="email" name="email" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone (Optional):</label>
+                    <input type="tel" id="phone" name="phone" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Rating:</label>
+                    <div>
+                        <input type="radio" name="rating" value="1" required> 1
+                        <input type="radio" name="rating" value="2"> 2
+                        <input type="radio" name="rating" value="3"> 3
+                        <input type="radio" name="rating" value="4"> 4
+                        <input type="radio" name="rating" value="5"> 5
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="question" class="form-label">Any Questions?</label>
+                    <input type="text" id="question" name="question" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="comments" class="form-label">Additional Comments:</label>
+                    <textarea id="comments" name="comments" class="form-control" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("feedbackForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            alert("Thank you for your feedback!");
+        });
+    </script>
+</body>
+</html>
